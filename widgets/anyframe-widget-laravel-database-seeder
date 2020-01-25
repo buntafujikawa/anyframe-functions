@@ -1,0 +1,4 @@
+ls database/seeds \
+  | anyframe-selector-auto \
+  | sed -E 's/^(.*)\.php/--class=\1/g' \
+  | anyframe-action-execute php artisan db:seed
