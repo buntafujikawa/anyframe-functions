@@ -1,0 +1,4 @@
+ git stash list \
+   | anyframe-selector-auto \
+   | sed -E 's/^(stash@{.}).*/\1/g' \
+   | anyframe-action-execute git stash apply
